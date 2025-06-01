@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Detection Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    {% if prediction %}
+        <p><strong>Disease:</strong> {{ prediction }}</p>
+        <img src="{{ image_url }}" alt="Uploaded Leaf" style="max-width: 400px;">
+    {% endif %}
+    <br>
+    <a href="{{ url_for('upload_file') }}">Upload another image</a>
+</body>
+</html>
